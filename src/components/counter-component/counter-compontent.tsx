@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import './counter-component.css';
 import NationalityComponent from "../nationality-component/nationality-component";
 import { getNationality } from "../../services/nationalize.service";
+import { GoogleLogin } from '@react-oauth/google';
+
 const CounterComponent = () =>{
   const [counter , setCounter] = useState<number>(0);
   const [name , setName] = useState<string>('');
@@ -37,6 +39,14 @@ const CounterComponent = () =>{
       </div>
       <div>
         <button onClick={handleNationalitySubmit}>Get Nationality</button>
+        <GoogleLogin
+          onSuccess={credentialResponse => {
+            console.log(credentialResponse);
+          }}
+          onError={() => {
+            console.log('Login Failed');
+          }}
+        />
       </div>
       <div>{nationality}</div>
     </div>

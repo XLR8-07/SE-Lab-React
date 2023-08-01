@@ -1,0 +1,23 @@
+.product-container
+{
+    background-color: #ccdef0;
+    height: 150px;
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 12px;
+    
+}
+
+.product-heading
+{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.product-description
+{
+    font-size: 10px;
+    margin-left: 100px;
+    margin-right: 20px;
+}
+
